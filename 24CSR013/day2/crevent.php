@@ -21,16 +21,17 @@
         </div>
         <ul class="nav border">
             <li class="nav-item">
-                <a class="nav-link text-dark" href="index.html">Home</a>
+                <a class="nav-link text-dark" href="indexlogged.php">Home</a>
             </li>
             <div class="dropdown">
                 <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown">
                     Account
                 </button>
                 <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="signup.php">Sign Up</a></li>
-                    <li><a class="dropdown-item" href="login.php">Log in</a></li>
-                    </ul>
+                    <li><a class="dropdown-item disabled" href="signup.php">Sign Up</a></li>
+                    <li><a class="dropdown-item disabled" href="login.php">Log in</a></li>
+                    <li><a class="dropdown-item" href="index.php">Log out</a></li>
+                </ul>
             </div>
         </ul>
     </div>

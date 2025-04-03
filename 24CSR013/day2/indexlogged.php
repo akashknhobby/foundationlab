@@ -46,6 +46,9 @@ if (session_status() === PHP_SESSION_NONE) {
             <li class="nav-item">
                 <a class="nav-link text-dark" href="crevent.php?email=<?php echo $_SESSION['email']; ?>"> Host an Event</a>
             </li>
+            <li class="nav-item">
+    <a class="nav-link text-dark" href="gallery.php">Gallery</a>
+</li>
         </ul>
     </div>
     <div class="body">

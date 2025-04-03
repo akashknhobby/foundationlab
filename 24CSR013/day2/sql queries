@@ -1,0 +1,10 @@
+CREATE TABLE IF NOT EXISTS `gallery` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `eventname` varchar(255) NOT NULL,
+  `eventdate` date NOT NULL,
+  `imagepath` varchar(255) NOT NULL,
+  `description` text,
+  `uploaded_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  KEY `eventname` (`eventname`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;        
