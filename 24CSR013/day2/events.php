@@ -12,7 +12,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT * FROM events ORDER BY eventdate ASC";
+$sql = "SELECT * FROM events ORDER BY eventdate DESC";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
@@ -24,6 +24,7 @@ if ($result->num_rows > 0) {
     <div class="card-body">
         <h5 class="card-title" id="eventname"><?php echo $row['eventname']; ?></h5>
         <p class="card-text">
+            <strong>Hosted By:</strong> <span id="eventdate"><?php echo $row['host']; ?></span><br>
             <strong>Date:</strong> <span id="eventdate"><?php echo $row['eventdate']; ?></span><br>
             <strong>Time:</strong> <span id="eventime"><?php echo $row['eventime']; ?></span>
         </p>

@@ -27,7 +27,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['eventname']) && isset(
     $sql = "INSERT INTO entries (email, eventname) VALUES ('$email', '$eventname')";
     
     if ($conn->query($sql) === TRUE) {
-        header("Location: $reglink"); // Redirect to event registration link
+        echo "<script>
+            window.open('$reglink', '_blank');
+            alert('Registration successful!');
+            window.location.href = 'indexlogged.php';
+              </script>";
         exit;
     } else {
         echo "Error: " . $conn->error;

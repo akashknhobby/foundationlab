@@ -35,18 +35,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <title>Login</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
     <div class="header">
         <div class="container-fluid bg-dark text-white p-5">
             <div class="content">
-                <div class="display-1">KEC Events</div>
+                <div class="display-1" style="text-align: center;">KEC Events</div>
             </div>
+            <div class="particle-container">
+                <canvas id="particle-canvas"></canvas>
+</div>
         </div>
         <ul class="nav border">
             <li class="nav-item">
-                <a class="nav-link text-dark" href="index.html">Home</a>
+                <a class="nav-link text-dark" href="index.php">Home</a>
             </li>
             <div class="dropdown">
                 <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown">Account</button>
@@ -77,7 +81,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
     </div>
     <div class="footer text-center">
-        <p>&copy; 2023 KEC Events. All rights reserved.</p>
+        <p>&copy; 2025 KEC Events. All rights reserved.</p>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

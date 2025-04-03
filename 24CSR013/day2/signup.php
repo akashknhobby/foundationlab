@@ -34,12 +34,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <canvas id="particle-canvas"></canvas>
             </div>
             <div class="content">
-                <div class="display-1">KEC Events</div>
+                <div class="display-1"  style="text-align: center;">KEC Events</div>
             </div>
         </div>
         <ul class="nav border">
             <li class="nav-item">
-                <a class="nav-link text-dark" href="index.html">Home</a>
+                <a class="nav-link text-dark" href="index.php">Home</a>
             </li>
             <div class="dropdown">
                 <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown">
@@ -80,7 +80,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <?php endif; ?>
     </div>
     <div class="footer" style="text-align: center;">
-        <p>&copy; 2023 KEC Events. All rights reserved.</p>
+        <p>&copy; 2025 KEC Events. All rights reserved.</p>
     </div>
 
 

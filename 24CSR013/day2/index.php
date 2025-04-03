@@ -23,9 +23,10 @@
                 <div class="display-1">KEC Events</div>
             </div>
         </div>
+        
         <ul class="nav border">
             <li class="nav-item">
-                <a class="nav-link text-dark" href="index.html">Home</a>
+                <a class="nav-link text-dark" href="index.php">Home</a>
             </li>
             <div class="dropdown">
                 <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown">
@@ -74,6 +75,11 @@
                                             <?php echo $row['eventname']; ?>
                                         </h5>
                                         <p class="card-text">
+                                            <strong>Hosted By:</strong> <span id="host">
+                                                <?php echo $row['host']; ?>
+                                            </span>
+                                        </p>
+                                        <p class="card-text">
                                             <strong>Date:</strong> <span id="eventdate">
                                                 <?php echo $row['eventdate']; ?>
                                             </span><br>
@@ -99,7 +105,7 @@
         </div>
     </div>
     <div class="footer" style="text-align: center;">
-        <p>&copy; 2023 KEC Events. All rights reserved.</p>
+        <p>&copy; 2025 KEC Events. All rights reserved.</p>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

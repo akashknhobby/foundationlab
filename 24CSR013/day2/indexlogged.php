@@ -31,17 +31,21 @@ if (session_status() === PHP_SESSION_NONE) {
         </div>
         <ul class="nav border">
             <li class="nav-item">
-                <a class="nav-link text-dark" href="index.html">Home</a>
+                <a class="nav-link text-dark" href="indexlogged.php">Home</a>
             </li>
             <div class="dropdown">
                 <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown">
                     Account
                 </button>
                 <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="signup.php">Sign Up</a></li>
-                    <li><a class="dropdown-item" href="login.php">Log in</a></li>
+                    <li><a class="dropdown-item disabled" href="signup.php">Sign Up</a></li>
+                    <li><a class="dropdown-item disabled" href="login.php">Log in</a></li>
+                    <li><a class="dropdown-item" href="index.php">Log out</a></li>
                 </ul>
             </div>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="crevent.php?email=<?php echo $_SESSION['email']; ?>"> Host an Event</a>
+            </li>
         </ul>
     </div>
     <div class="body">
@@ -82,6 +86,12 @@ if (session_status() === PHP_SESSION_NONE) {
                                             <?php echo $row['eventname']; ?>
                                         </h5>
                                         <p class="card-text">
+                                            <strong>Hosted By:</strong> <span id="host">
+                                                <?php echo $row['host']; ?>
+                                            </span>
+                                        </p>
+                                        <p class="card-text">
+
                                             <strong>Date:</strong> <span id="eventdate">
                                                 <?php echo $row['eventdate']; ?>
                                             </span><br>
@@ -213,7 +223,7 @@ if (session_status() === PHP_SESSION_NONE) {
         </div>
     </div>
     <div class="footer" style="text-align: center;">
-        <p>&copy; 2023 KEC Events. All rights reserved.</p>
+        <p>&copy; 2025 KEC Events. All rights reserved.</p>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
